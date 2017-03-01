@@ -64,7 +64,7 @@ for i in range(1,len(videos)):
 			print('The directory is',vstr)
 			if os.path.isdir(vstr):
 				print(vstr)
-				#shutil.move(vstr,newdir)
+				shutil.move(vstr,newdir)
 			#print('The new target folder is',vstr)
 			#shutil.move(vstr,newdir)	
 		#shutil.copy2(video,newdir)
