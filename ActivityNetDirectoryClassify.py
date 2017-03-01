@@ -42,7 +42,7 @@ for i in range(1,len(videos)):
 	#	print('Random directry Found')
 	if s1==str1:
 		print('testing')
-		#shutil.copy2(video,'testing')
+		shutil.copy2(video,'testing')
 	if s1==str2:
 		print('training')
 		start = vl.find('label')+10
