@@ -16,10 +16,8 @@ videos= glob.glob("*.mp4")
 str1="t e s t i n g"
 str2="t r a i n i n g"
 str3="v a l i d a t i o n"
-stind=int(sys.argv[1])
-print('The start index is',stind)
 print('The number of videos are',len(videos))
-for i in range(stind,stind+1):
+for i in range(0,len(videos)):
 
 	print('Processing video number ',i)
 	video=videos[i]
@@ -40,7 +38,7 @@ for i in range(stind,stind+1):
 	#	print('Random directry Found')
 	if s1==str1:
 		print('testing')
-		#shutil.copy2(video,'testing')
+		shutil.copy2(video,'testing')
 	if s1==str2:
 		print('training')
 		start = vl.find('label')+10
@@ -59,11 +57,6 @@ for i in range(stind,stind+1):
 			vstr=newdir+'/'+video[0:len(video)-4]+str(j)+'.mp4'
 			#print('The new target folder is',vstr)
 			ffmpeg_extract_subclip(video, tstart, tend, targetname=vstr)
-			#clip = VideoFileClip(video).cutout(tstart, tend)
-			#clip.write_videofile(vstr)
-			#subprocess.call(['/home/mscvproject/.imageio/ffmpeg/ffmpeg.linux64'])	
-		#shutil.copy2(video,newdir)
-                #print(label)
 	if s1==str3:
 		print('validation')
 		start = vl.find('label')+10
@@ -82,13 +75,6 @@ for i in range(stind,stind+1):
 			vstr=newdir+'/'+video[0:len(video)-4]+str(j)+'.mp4'
                         #print('The new target folder is',vstr)
 			ffmpeg_extract_subclip(video, tstart, tend, targetname=vstr)
-			#clip = VideoFileClip(video).cutout(tstart, tend)
-			#clip.write_videofile(vstr)
-			#subprocess.call(['/home/mscvproject/.imageio/ffmpeg/ffmpeg.linux64'])	
-		#shutil.copy2(video,newdir)
-
-	#print(dataref[video[2:len(video)-4]]["annotations"])
-	#print(dataref[video[2:len(video)-4]]["subset"])
 	
 
 
