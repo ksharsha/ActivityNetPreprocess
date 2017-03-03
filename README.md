@@ -1,13 +1,13 @@
 # ActivityNetPreprocess
 Scripts useful to parse ActivityNet dataset.
 
-Download the Activity Net dataset using the [crawler]:https://github.com/activitynet/ActivityNet 
+Download the Activity Net dataset using the <a href="https://github.com/activitynet/ActivityNet">crawler</a>  
 
 place the ActivityNetparser.py file in the same directory and create three sub directories training, testing, validation.
 
-Make sure you have ffmpeg installed, if not install it from [here]:https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg .
+Make sure you have ffmpeg installed, if not install it from <a href="https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg">here</a> 
 
-Install moviepy from [here]:http://zulko.github.io/moviepy/install.html 
+Install moviepy from <a href="http://zulko.github.io/moviepy/install.html">here</a>  
 
 place the json file containing the activity net data in the same directory.
 
